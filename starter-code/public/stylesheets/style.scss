@@ -1,0 +1,30 @@
+/* In common
+$rosa: #F207A0;
+$morado-claro: #685E8C;
+$morado-oscuro: #595173;
+$naranja: #F28705;
+$marron: $A64F03;
+*/
+
+$font-stack:    Helvetica, sans-serif;
+
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li { display: inline-block; }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
