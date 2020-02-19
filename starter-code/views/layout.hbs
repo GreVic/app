@@ -48,9 +48,13 @@
   <section class="body">
     {{{body}}}
   </section>
-
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script type="text/javascript" src="/javascripts/apiMovies.js"></script>
-  <script src="/javascripts/script.js"></script>
+  <script>
+    window.onload = function () {
+      console.log(apitMaster());
+    }
+  </script>
 </body>
 
 </html>
