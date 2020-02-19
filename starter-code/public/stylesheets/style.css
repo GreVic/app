@@ -9,6 +9,9 @@ body {
   font: 100% Helvetica, sans-serif;
   color: #333; }
 
+.body-section {
+  padding: 25px 50px; }
+
 nav ul {
   margin: 0;
   padding: 0;

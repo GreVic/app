@@ -80,7 +80,7 @@ app.use((req, res, next) => {
 });
 
 // default value for title local
-app.locals.title = "Lab Authentication With Passport";
+app.locals.title = "Greevic | Learn new languages with movies";
 
 // Routes middleware goes here
 const index = require("./routes/index");

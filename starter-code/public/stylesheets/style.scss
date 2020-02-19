@@ -6,13 +6,16 @@ $naranja: #F28705;
 $marron: $A64F03;
 */
 
-$font-stack:    Helvetica, sans-serif;
+$font-stack: Helvetica, sans-serif;
 
 $primary-color: #333;
 
 body {
   font: 100% $font-stack;
   color: $primary-color;
+}
+.body-section {
+  padding: 25px 50px;
 }
 
 nav {
@@ -21,7 +24,9 @@ nav {
     padding: 0;
     list-style: none;
   }
-  li { display: inline-block; }
+  li {
+    display: inline-block;
+  }
   a {
     display: block;
     padding: 6px 12px;

@@ -34,7 +34,10 @@ passportRouter.get("/login", isLoggedOut(), (req, res, next) => {
 passportRouter.post(
   "/login",
   isLoggedOut(),
-  passport.authenticate("local", { successRedirect: "/", failureRedirect: "/" })
+  passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/signup"
+  })
 );
 
 passportRouter.get("/logout", isLoggedIn(), async (req, res, next) => {
