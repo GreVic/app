@@ -1,27 +1,21 @@
-let theMovieDb = {};
-theMovieDb.common = {
-  api_key: "62706964a54757878e9737ac5a8ceafc",
-  base_uri: "http://api.themoviedb.org/3/",
-  images_uri: "http://image.tmdb.org/t/p/",
-  timeout: 5000,
-  language: "en-US",
-  generateQuery: function (options) {
-    'use strict';
-    let myOptions, query, option;
-    myOptions = options || {};
-    query = "?api_key=" + theMovieDb.common.api_key + "&language=" + theMovieDb.common.language;
-    if (Object.keys(myOptions).length > 0) {
-      for (option in myOptions) {
-        if (myOptions.hasOwnProperty(option) && option !== "id" && option !== "body") {
-          query = query + "&" + option + "=" + myOptions[option];
-        }
-      }
-    }
-    return query;
+//const baseURL = "https://api.themoviedb.org/3/movie/550?api_key=62706964a54757878e9737ac5a8ceafc";
+function apitMaster() {
+  const baseURL = "https://api.themoviedb.org/3/movie/550?api_key=62706964a54757878e9737ac5a8ceafc";
+
+  function getData(baseURL) {
+    axios
+      .get(baseURL)
+      .then(movies => {
+        console.log(movies);
+        return movies;
+
+      })
+      .catch(err => console.log(err));
   }
+  return getData(baseURL);
 }
 
-// const baseURL = "https://api.themoviedb.org/3/movie/550?api_key=62706964a54757878e9737ac5a8ceafc";
+apitMaster();
 
 // function apitMaster() {
 //   const baseURL = "https://api.themoviedb.org/3/movie/550?api_key=62706964a54757878e9737ac5a8ceafc";
@@ -29,11 +23,11 @@ theMovieDb.common = {
 //   function getData(baseURL) {
 //     axios
 //       .get(baseURL)
-//       .then(dataPayload => {
-//         console.log(dataPayload.data.bpi);
-//         const myKeys = Object.keys(dataPayload.data.bpi);
+//       .then(movies => {
+//         console.log(movies.data.bpi);
+//         const myKeys = Object.keys(movies.data.bpi);
 //         const myValues = myKeys.map(date => {
-//           return dataPayload.data.bpi[date];
+//           return movies.data.bpi[date];
 //         });
 //       })
 //       .catch(err => console.log(err));
@@ -42,6 +36,31 @@ theMovieDb.common = {
 // }
 
 // apitMaster();
+
+// let theMovieDb = {};
+// theMovieDb.common = {
+//   api_key: "62706964a54757878e9737ac5a8ceafc",
+//   base_uri: "http://api.themoviedb.org/3/",
+//   images_uri: "http://image.tmdb.org/t/p/",
+//   timeout: 5000,
+//   language: "en-US",
+//   generateQuery: function (options) {
+//     'use strict';
+//     let myOptions, query, option;
+//     myOptions = options || {};
+//     query = "?api_key=" + theMovieDb.common.api_key + "&language=" + theMovieDb.common.language;
+//     if (Object.keys(myOptions).length > 0) {
+//       for (option in myOptions) {
+//         if (myOptions.hasOwnProperty(option) && option !== "id" && option !== "body") {
+//           query = query + "&" + option + "=" + myOptions[option];
+//         }
+//       }
+//     }
+//     return query;
+//   }
+// }
+
+
 
 //_________________________________________________
 
