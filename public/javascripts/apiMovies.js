@@ -1,6 +1,7 @@
 //const baseURL = "https://api.themoviedb.org/3/movie/550?api_key=62706964a54757878e9737ac5a8ceafc";
-function apitMaster() {
-  const baseURL = "https://api.themoviedb.org/3/movie/550?api_key=62706964a54757878e9737ac5a8ceafc";
+function apiMaster() {
+  const baseURL =
+    "https://api.themoviedb.org/3/movie/550?api_key=62706964a54757878e9737ac5a8ceafc";
 
   function getData(baseURL) {
     axios
@@ -8,14 +9,13 @@ function apitMaster() {
       .then(movies => {
         console.log(movies);
         return movies;
-
       })
       .catch(err => console.log(err));
   }
   return getData(baseURL);
 }
 
-apitMaster();
+apiMaster();
 
 // function apitMaster() {
 //   const baseURL = "https://api.themoviedb.org/3/movie/550?api_key=62706964a54757878e9737ac5a8ceafc";
@@ -59,8 +59,6 @@ apitMaster();
 //     return query;
 //   }
 // }
-
-
 
 //_________________________________________________
 
@@ -106,5 +104,3 @@ apitMaster();
 //     }
 //   }
 // })()
-
-

@@ -13,11 +13,12 @@ passportRouter.get("/signup", isLoggedOut(), (req, res, next) => {
 });
 
 passportRouter.post("/signup", isLoggedOut(), async (req, res, next) => {
-  const { username, password, name, lastname, year, country } = req.body;
+  const { username, useremail, password } = req.body;
   const existingUser = await model.findOne({ username });
   if (!existingUser) {
     const newUser = await model.create({
       username,
+      useremail,
       password: hashPassword(password)
     });
     res.redirect("/login");
