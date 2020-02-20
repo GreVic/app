@@ -1,4 +1,5 @@
 //const baseURL = "https://api.themoviedb.org/3/movie/550?api_key=62706964a54757878e9737ac5a8ceafc";
+
 function apiMaster() {
   const baseURL =
     "https://api.themoviedb.org/3/movie/550?api_key=62706964a54757878e9737ac5a8ceafc";
