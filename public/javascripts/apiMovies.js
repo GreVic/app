@@ -2,7 +2,7 @@
 
 function apiMaster() {
   const baseURL =
-    "https://api.themoviedb.org/3/movie/550?api_key=62706964a54757878e9737ac5a8ceafc";
+    "https://api.themoviedb.org/3/discover/movie?api_key=62706964a54757878e9737ac5a8ceafc&with_genres=18&with_original_language=ca&sort_by=runtime.asc";
 
   function getData(baseURL) {
     axios

@@ -1,1 +1,34 @@
-<h2>privates</h2>
+<main>
+  <section class="container">
+
+    <h2>Test filters</h2>
+
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+
+    <div class="data">
+      From: <input type="date" name="from-date" id="fromDate" value="2019-01-01">
+      To: <input type="date" name="to-date" id="toDate" value="2019-12-01">
+    </div>
+    <div class="data">
+      Choose the currency:
+      <select name="currency" id="currency">
+        <option class="dropdown-item" value="USD" id="usd">USD</option>
+        <option class="dropdown-item" value="EUR" id="eur">EUR</option>
+      </select>
+    </div>
+    <div style="width:90%;">
+      <canvas id="myChart"></canvas>
+    </div>
+  </section>
+
+</main>
