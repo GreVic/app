@@ -3,6 +3,47 @@
 
     <h2>Test filters</h2>
 
+    <div>
+      Choose the language:
+      <select name="language" id="language">
+        <option value="en" id="en">English</option>
+        <option value="es" id="es">Spanish</option>
+        <option value="de" id="de">German</option>
+        <option value="fr" id="fr">French</option>
+        <option value="it" id="it">Italian</option>
+        <option value="zh" id="zh">Chinese</option>
+        <option value="ko" id="ko">Korean</option>
+        <option value="ca" id="ca">Catalan</option>
+        <option value="eu" id="eu">Euskera</option>
+      </select>
+    </div>
+    <div>
+      Choose the genre:
+      <select name="genre" id="genre">
+        <option value="28" id="28">Action</option>
+        <option value="12" id="12">Adventure</option>
+        <option value="16" id="16">Animation</option>
+        <option value="35" id="35">Comedy</option>
+        <option value="80" id="80">Crime</option>
+        <option value="18" id="18">Drama</option>
+        <option value="14" id="14">Fantasy</option>
+        <option value="27" id="27">Horror</option>
+        <option value="9648" id="9648">Mystery</option>
+        <option value="10749" id="10749">Romance</option>
+        <option value="878" id="878">Science Fiction</option>
+        <option value="53" id="53">Thriller</option>
+      </select>
+    </div>
+    <!-- Ver si se añade este filtro o no
+    <div>
+      Only for adults:
+      <select name="adult" id="adult">
+        <option value="false" id="false">For everyone</option>
+        <option value="true" id="true">+ 18</option>
+      </select>
+    </div>
+ -->
+    <!-- Estilo botón dropdown
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
@@ -14,21 +55,12 @@
         <a class="dropdown-item" href="#">Something else here</a>
       </div>
     </div>
+    -->
 
-    <div class="data">
-      From: <input type="date" name="from-date" id="fromDate" value="2019-01-01">
-      To: <input type="date" name="to-date" id="toDate" value="2019-12-01">
-    </div>
-    <div class="data">
-      Choose the currency:
-      <select name="currency" id="currency">
-        <option class="dropdown-item" value="USD" id="usd">USD</option>
-        <option class="dropdown-item" value="EUR" id="eur">EUR</option>
-      </select>
-    </div>
     <div style="width:90%;">
       <canvas id="myChart"></canvas>
     </div>
+
   </section>
 
 </main>

@@ -1,8 +1,13 @@
-//const baseURL = "https://api.themoviedb.org/3/movie/550?api_key=62706964a54757878e9737ac5a8ceafc";
+//const baseURL = "https://api.themoviedb.org/3/discover/movie?api_key=62706964a54757878e9737ac5a8ceafc&with_genres=18&with_original_language=ca&sort_by=runtime.asc"
+const languages = document.querySelector("#language");
+const genres = document.querySelector("#genre");
+//const adults = document.querySelector("#adult");
+
+//&with_original_language=en
 
 function apiMaster() {
-  const baseURL =
-    "https://api.themoviedb.org/3/discover/movie?api_key=62706964a54757878e9737ac5a8ceafc&with_genres=18&with_original_language=ca&sort_by=runtime.asc";
+  const baseURL = `https://api.themoviedb.org/3/discover/movie?api_key=62706964a54757878e9737ac5a8ceafc&with_original_language=${languages.value}&with_genres=${genres.value}`;
+  //&include_adult=${adults.value == "true"} checkbox?
 
   function getData(baseURL) {
     axios
@@ -16,92 +21,11 @@ function apiMaster() {
   return getData(baseURL);
 }
 
+languages.addEventListener("change", apiMaster);
+genres.addEventListener("change", apiMaster);
+//adults.addEventListener("change", apiMaster);
 apiMaster();
 
-// function apitMaster() {
-//   const baseURL = "https://api.themoviedb.org/3/movie/550?api_key=62706964a54757878e9737ac5a8ceafc";
-
-//   function getData(baseURL) {
-//     axios
-//       .get(baseURL)
-//       .then(movies => {
-//         console.log(movies.data.bpi);
-//         const myKeys = Object.keys(movies.data.bpi);
-//         const myValues = myKeys.map(date => {
-//           return movies.data.bpi[date];
-//         });
-//       })
-//       .catch(err => console.log(err));
-//   }
-//   getData(baseURL);
+// function apiLanguage () {
+//   const english = languageEnglish.
 // }
-
-// apitMaster();
-
-// let theMovieDb = {};
-// theMovieDb.common = {
-//   api_key: "62706964a54757878e9737ac5a8ceafc",
-//   base_uri: "http://api.themoviedb.org/3/",
-//   images_uri: "http://image.tmdb.org/t/p/",
-//   timeout: 5000,
-//   language: "en-US",
-//   generateQuery: function (options) {
-//     'use strict';
-//     let myOptions, query, option;
-//     myOptions = options || {};
-//     query = "?api_key=" + theMovieDb.common.api_key + "&language=" + theMovieDb.common.language;
-//     if (Object.keys(myOptions).length > 0) {
-//       for (option in myOptions) {
-//         if (myOptions.hasOwnProperty(option) && option !== "id" && option !== "body") {
-//           query = query + "&" + option + "=" + myOptions[option];
-//         }
-//       }
-//     }
-//     return query;
-//   }
-// }
-
-//_________________________________________________
-
-// (function () {
-//   window.tmdb = {
-//     "api_key": "62706964a54757878e9737ac5a8ceafc",
-//     "base_uri": "http://api.themoviedb.org/3",
-//     "images_uri": "http://image.tmdb.org/t/p",
-//     "timeout": 5000,
-//     call: function (url, params, success, error) {
-//       let params_str = "api_key=" + tmdb.api_key;
-//       for (let key in params) {
-//         if (params.hasOwnProperty(key)) {
-//           params_str += "&" + key + "=" + encodeURIComponent(params[key]);
-//         }
-//       }
-//       let xhr = new XMLHttpRequest();
-//       xhr.timeout = tmdb.timeout;
-//       xhr.ontimeout = function () {
-//         throw ("Request timed out: " + url + " " + params_str);
-//       };
-//       xhr.open("GET", tmdb.base_uri + url + "?" + params_str, true);
-//       xhr.setRequestHeader('Accept', 'application/json');
-//       xhr.responseType = "text";
-//       xhr.onreadystatechange = function () {
-//         if (this.readyState === 4) {
-//           if (this.status === 200) {
-//             if (typeof success == "function") {
-//               success(JSON.parse(this.response));
-//             } else {
-//               throw ('No success callback, but the request gave results')
-//             }
-//           } else {
-//             if (typeof error == "function") {
-//               error(JSON.parse(this.response));
-//             } else {
-//               throw ('No error callback')
-//             }
-//           }
-//         }
-//       };
-//       xhr.send();
-//     }
-//   }
-// })()
