@@ -31,6 +31,7 @@
           <a class="nav-link" href="/login">Login</a>
         </li>
 
+
         {{#if user}}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -38,10 +39,15 @@
             Hello {{ user.username}}
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/private">My Account</a>
+            <a class="dropdown-item" href="/private">Find Your movie</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/logout">Log Out</a>
+            <a class="dropdown-item" href="#">My Account</a>
+
           </div>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Log Out</a>
         </li>
         {{/if}}
 
