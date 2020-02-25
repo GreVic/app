@@ -81,14 +81,14 @@ function apiMaster() {
           original_language,
           backdrop_path,
           vote_average,
-          overview
+          overview, id
         } = data;
-        const card = `<div><img src=${
+        const card = `<div><a href="/movie/${id}"><img src=${
           backdrop_path
             ? `https://image.tmdb.org/t/p/w500/${backdrop_path}`
             : "http://localhost:3001/images/default.png"
-        }><h3>Title: ${original_title}</h3> <p>Overview: ${overview}</p><p>Language: ${original_language}</p> <p>Vote Average: ${vote_average}</p> <p>Stream On: <a href="#">Netflix</a> | <a href="#">Amazon Prime</a>| <a href="#">HBO</a></p>
-        </div> `;
+          }><h3>Title: ${original_title}</h3> <p>Overview: ${overview}</p><p>Language: ${original_language}</p> <p>Vote Average: ${vote_average}</p> <p>Stream On: <a href="#">Netflix</a> | <a href="#">Amazon Prime</a>| <a href="#">HBO</a></p>
+          </a></div> `;
 
         document.querySelector("#movies").innerHTML += card;
       });
@@ -96,7 +96,6 @@ function apiMaster() {
       return movies;
     });
 
-    document.querySelector("#printGenre").innerText = findGenres(genresPrint);
   }
 
   return getDataAndPrint(baseURL, languagesPrint, genresPrint);
