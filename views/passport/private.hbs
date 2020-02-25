@@ -1,51 +1,53 @@
 <main>
   <section class="container">
 
-    <h2>Test filters</h2>
+    <h2>Find your Movie</h2>
+    <div class="filters">
+      <div>
+        Choose the language:
+        <select name="language" id="language">
+          <option value="en" id="en">English</option>
+          <option value="es" id="es">Spanish</option>
+          <option value="de" id="de">German</option>
+          <option value="fr" id="fr">French</option>
+          <option value="it" id="it">Italian</option>
+          <option value="zh" id="zh">Chinese</option>
+          <option value="ko" id="ko">Korean</option>
+          <option value="ca" id="ca">Catalan</option>
+          <option value="eu" id="eu">Euskera</option>
+        </select>
+      </div>
 
-    <div>
-      Choose the language:
-      <select name="language" id="language">
-        <option value="en" id="en">English</option>
-        <option value="es" id="es">Spanish</option>
-        <option value="de" id="de">German</option>
-        <option value="fr" id="fr">French</option>
-        <option value="it" id="it">Italian</option>
-        <option value="zh" id="zh">Chinese</option>
-        <option value="ko" id="ko">Korean</option>
-        <option value="ca" id="ca">Catalan</option>
-        <option value="eu" id="eu">Euskera</option>
-      </select>
-    </div>
-    <div>
-      Choose the genre:
-      <select name="genre" id="genre">
-        <option value="28" id="28">Action</option>
-        <option value="12" id="12">Adventure</option>
-        <option value="16" id="16">Animation</option>
-        <option value="35" id="35">Comedy</option>
-        <option value="80" id="80">Crime</option>
-        <option value="18" id="18">Drama</option>
-        <option value="14" id="14">Fantasy</option>
-        <option value="27" id="27">Horror</option>
-        <option value="9648" id="9648">Mystery</option>
-        <option value="10749" id="10749">Romance</option>
-        <option value="878" id="878">Science Fiction</option>
-        <option value="53" id="53">Thriller</option>
-      </select>
-    </div>
+      <div>
+        Choose the genre:
+        <select name="genre" id="genre">
+          <option value="28" id="28">Action</option>
+          <option value="12" id="12">Adventure</option>
+          <option value="16" id="16">Animation</option>
+          <option value="35" id="35">Comedy</option>
+          <option value="80" id="80">Crime</option>
+          <option value="18" id="18">Drama</option>
+          <option value="14" id="14">Fantasy</option>
+          <option value="27" id="27">Horror</option>
+          <option value="9648" id="9648">Mystery</option>
+          <option value="10749" id="10749">Romance</option>
+          <option value="878" id="878">Science Fiction</option>
+          <option value="53" id="53">Thriller</option>
+        </select>
+      </div>
 
-    <div>
-      Sort by:
-      <select name="sorting" id="sorting">
-        <option value="popularity.desc" id="popularityDesc">Popularity: Desc 👍🏻</option>
-        <option value="popularity.asc" id="popularityAsc">Popularity: Asc 👎🏻</option>
-        <option value="release_date.desc" id="popularityDesc">Release Date: Desc 🗓</option>
-        <option value="release_date.asc" id="popularityAsc">Release Date: Asc 🗓</option>
-        <option value="original_title.desc" id="popularityDesc">Original Title: Desc 📽</option>
-        <option value="original_title.asc" id="popularityAsc">Original Title: Asc 🎞</option>
+      <div>
+        Sort by:
+        <select name="sorting" id="sorting">
+          <option value="popularity.desc" id="popularityDesc">Popularity: Desc 👍🏻</option>
+          <option value="popularity.asc" id="popularityAsc">Popularity: Asc 👎🏻</option>
+          <option value="release_date.desc" id="popularityDesc">Release Date: Desc 🗓</option>
+          <option value="release_date.asc" id="popularityAsc">Release Date: Asc 🗓</option>
+          <option value="original_title.desc" id="popularityDesc">Original Title: Desc 📽</option>
+          <option value="original_title.asc" id="popularityAsc">Original Title: Asc 🎞</option>
+        </select>
+      </div>
 
-      </select>
     </div>
     <!-- Ver si se añade este filtro o no
     <div>
@@ -71,7 +73,7 @@
     
     -->
 
-    <div style="width:90%;">
+    <div style="width:100%;">
 
       <div id="movies"></div>
     </div>
