@@ -15,6 +15,10 @@ body {
   color: $primary-color;
   background-color: $light-grey;
 }
+
+h2 {
+  text-align: center;
+}
 /*BUTTONS*/
 button {
   background-color: $light-pink;
@@ -78,6 +82,7 @@ header {
   }
   h2 {
     color: rgba(255, 255, 255, 0.7);
+    text-align: center;
   }
 }
 .container {
@@ -122,3 +127,62 @@ header {
     }
   }
 }
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 15px 0px;
+  background-color: rgba($orange, 0.5);
+}
+
+#movies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: $primary-color;
+
+  .card {
+    width: 46%;
+    margin: 2%;
+    border-radius:30px;
+    -webkit-box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
+    background-color: #fff;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba($orange, 0.4);
+    }
+
+    h3 {
+      text-align: center;
+      color: $light-purple;
+      font-size: 22px;
+    }
+    a {
+      color: $primary-color;
+      text-decoration: none;
+    }
+    .movie-image {
+      width: 100%;
+      background-size: cover;
+    }
+    .card-text {
+      text-align: center;
+      padding: 15px 30px;
+  
+    border-radius:30px;
+    }
+    p {
+      font-size: 15px;
+    }
+    .average {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+
