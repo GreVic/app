@@ -152,4 +152,9 @@ header {
       flex-direction: row;
       justify-content: space-evenly; }
 
+.cardMax {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
 /*# sourceMappingURL=style.css.map */

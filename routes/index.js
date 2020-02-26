@@ -14,7 +14,6 @@ router.get("/movie/:id", (req, res, next) => {
 
   axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=62706964a54757878e9737ac5a8ceafc`)
     .then((results) => {
-
       return res.render("passport/card", { movie: results.data });
     })
     .catch(err => console.log(err));

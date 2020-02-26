@@ -1,2 +1,17 @@
-<h2>{{movie.title}}</h2>
-<p>{{movie.original_title}}</p>
+<div class="container">
+  <div class="cardMax">
+    <div>
+      <img class="movie-image" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+    </div>
+    <div>
+      <h2>{{movie.original_title}}</h2>
+      <p>{{movie.tagline}}</p>
+      <p>{{movie.vote_average}}</p>
+      <p>{{movie.overview}}</p>
+      <p>{{movie.release_date}}</p>
+      <p>{{movie.runtime}} min.</p>
+      <p>Languages spoken in the movie: {{movie.spoken_languages.[0].name}}</p>
+      <p>Original language: "{{movie.original_language}}"</p>
+    </div>
+  </div>
+</div>
