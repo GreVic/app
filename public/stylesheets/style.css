@@ -7,6 +7,9 @@ body {
 h2 {
   text-align: center; }
 
+select {
+  height: 35px; }
+
 /*BUTTONS*/
 button {
   background-color: #f168c1;
@@ -107,13 +110,14 @@ header {
   flex-direction: row;
   justify-content: space-evenly;
   padding: 15px 0px;
-  background-color: rgba(242, 135, 5, 0.5); }
+  background-color: rgba(242, 135, 5, 0.5);
+  border-radius: 10px; }
 
 #movies {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  color: #333; }
+  color: #fff; }
   #movies .card {
     width: 46%;
     margin: 2%;
@@ -121,20 +125,22 @@ header {
     -webkit-box-shadow: 10px 10px 19px -10px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 19px -10px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 19px -10px rgba(0, 0, 0, 0.75);
-    background-color: #fff;
+    background-color: #595173;
     cursor: pointer; }
     #movies .card:hover {
-      background-color: rgba(242, 135, 5, 0.4); }
+      background-color: rgba(104, 94, 140, 0.85); }
     #movies .card h3 {
       text-align: center;
-      color: #685e8c;
+      color: #f28705;
       font-size: 22px; }
     #movies .card a {
-      color: #333;
+      color: #fff;
       text-decoration: none; }
     #movies .card .movie-image {
       width: 100%;
-      background-size: cover; }
+      background-size: cover;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px; }
     #movies .card .card-text {
       text-align: center;
       padding: 15px 30px;
@@ -145,5 +151,10 @@ header {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly; }
+
+.cardMax {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
 
 /*# sourceMappingURL=style.css.map */

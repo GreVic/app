@@ -92,10 +92,10 @@ function apiMaster() {
             <h3>Title: ${original_title}</h3>
             <p>Overview: ${overview}</p>
             <div class="average">
-              <p>Language: ${original_language}</p>
-              <p>Vote Average: ${vote_average}</p>
+              <p><h5>Language:</h5> ${original_language}</p>
+              <p><h5>Vote Average:</h5> ${vote_average}</p>
             </div>
-            <p>Stream On:<a href="#">Netflix</a> | <a href="#">Amazon Prime</a>| <a href="#">HBO</a></p>
+            <p><h5>Stream On:</h5> <a href="#">Netflix</a> | <a href="#">Amazon Prime</a>| <a href="#">HBO</a></p>
             
           </div>
           </a></div> `;
