@@ -24,7 +24,15 @@ select {
   height: 35px;
 }
 /*BUTTONS*/
-button {
+a {
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+button,
+.button {
   background-color: $light-pink;
   padding: 10px 40px;
   border-radius: 50px;
@@ -150,10 +158,10 @@ header {
   .card {
     width: 46%;
     margin: 2%;
-    border-radius:30px;
-    -webkit-box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
+    border-radius: 30px;
+    -webkit-box-shadow: 10px 10px 19px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 19px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 19px -10px rgba(0, 0, 0, 0.75);
     background-color: $dark-purple;
     cursor: pointer;
     &:hover {
@@ -178,8 +186,8 @@ header {
     .card-text {
       text-align: center;
       padding: 15px 30px;
-  
-    border-radius:30px;
+
+      border-radius: 30px;
     }
     p {
       font-size: 15px;

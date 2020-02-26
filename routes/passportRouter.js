@@ -6,6 +6,19 @@ const passport = require("passport");
 const { isLoggedIn, isLoggedOut } = require("../lib/isLoggedMiddleware");
 
 const ensureLogin = require("connect-ensure-login");
+// Create: login
+passportRouter.get("/login", isLoggedOut(), (req, res, next) => {
+  res.render("passport/login");
+});
+
+passportRouter.post(
+  "/login",
+  isLoggedOut(),
+  passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/signup"
+  })
+);
 
 // Create: signup or register
 passportRouter.get("/signup", isLoggedOut(), (req, res, next) => {
@@ -27,25 +40,43 @@ passportRouter.post("/signup", isLoggedOut(), async (req, res, next) => {
   }
 });
 
-// Create: login
-passportRouter.get("/login", isLoggedOut(), (req, res, next) => {
-  res.render("passport/login");
+//Show user info
+passportRouter.get("/show", isLoggedIn(), async (req, res, next) => {
+  try {
+    const { id } = req.user;
+    const foundObjFromId = await model.findById(id);
+    return res.render("passport/show", { foundObjFromId });
+  } catch (err) {
+    res.send(`error: ${err}`);
+    next();
+  }
 });
 
-passportRouter.post(
-  "/login",
-  isLoggedOut(),
-  passport.authenticate("local", {
-    successRedirect: "/",
-    failureRedirect: "/signup"
-  })
-);
+//Edit user info
+passportRouter.get("/edit", isLoggedIn(), async (req, res) => {
+  const { id } = req.user;
+  const obj = await model.findById(id);
+  return res.render("passport/edit", { obj, isUpdate: true });
+});
 
+passportRouter.post("/edit", isLoggedIn(), async (req, res) => {
+  const { id } = req.user;
+  const { username, useremail, password } = req.body;
+  await model.findByIdAndUpdate(id, {
+    username,
+    useremail,
+    password: hashPassword(password)
+  });
+  res.redirect("/show");
+});
+
+// Logout
 passportRouter.get("/logout", isLoggedIn(), async (req, res, next) => {
   req.logout();
   res.redirect("/");
 });
 
+//Private
 passportRouter.get("/private", isLoggedIn(), (req, res, next) => {
   res.render("passport/private");
 });

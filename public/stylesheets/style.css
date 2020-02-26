@@ -11,14 +11,20 @@ select {
   height: 35px; }
 
 /*BUTTONS*/
-button {
+a:hover {
+  text-decoration: none;
+  color: #fff; }
+
+button,
+.button {
   background-color: #f168c1;
   padding: 10px 40px;
   border-radius: 50px;
   border: none;
   font-size: 18px;
   color: #fff; }
-  button:hover {
+  button:hover,
+  .button:hover {
     background-color: #f207a0; }
 
 /*MENU*/
