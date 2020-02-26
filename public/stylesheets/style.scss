@@ -19,6 +19,10 @@ body {
 h2 {
   text-align: center;
 }
+
+select {
+  height: 35px;
+}
 /*BUTTONS*/
 button {
   background-color: $light-pink;
@@ -134,13 +138,14 @@ header {
   justify-content: space-evenly;
   padding: 15px 0px;
   background-color: rgba($orange, 0.5);
+  border-radius: 10px;
 }
 
 #movies {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  color: $primary-color;
+  color: #fff;
 
   .card {
     width: 46%;
@@ -149,24 +154,26 @@ header {
     -webkit-box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
-    background-color: #fff;
+    background-color: $dark-purple;
     cursor: pointer;
     &:hover {
-      background-color: rgba($orange, 0.4);
+      background-color: rgba($light-purple, 0.85);
     }
 
     h3 {
       text-align: center;
-      color: $light-purple;
+      color: $orange;
       font-size: 22px;
     }
     a {
-      color: $primary-color;
+      color: #fff;
       text-decoration: none;
     }
     .movie-image {
       width: 100%;
       background-size: cover;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
     }
     .card-text {
       text-align: center;
