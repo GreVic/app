@@ -59,7 +59,7 @@ passportRouter.get("/edit-account", isLoggedIn(), async (req, res) => {
   return res.render("passport/edit", { obj, isUpdate: true });
 });
 
-passportRouter.post("/edit", isLoggedIn(), async (req, res) => {
+passportRouter.post("/edit-account", isLoggedIn(), async (req, res) => {
   const { id } = req.user;
   const { username, useremail, password } = req.body;
   await model.findByIdAndUpdate(id, {
@@ -67,7 +67,7 @@ passportRouter.post("/edit", isLoggedIn(), async (req, res) => {
     useremail,
     password: hashPassword(password)
   });
-  res.redirect("/show");
+  res.redirect("/my-account");
 });
 
 // Logout
