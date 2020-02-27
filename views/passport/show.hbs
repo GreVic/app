@@ -1,8 +1,10 @@
 <section class="container">
-  <h2>{{foundObjFromId.username}} Info</h2>
-  <ul>
-    <li>Name: {{foundObjFromId.username}} </li>
-    <li>Email: {{foundObjFromId.useremail}}</li>
-  </ul>
-  <a class="button" href="/edit">Edit my user</a>
+  <div class="width-forms">
+    <h2>Hello, <span class="user-name">{{foundObjFromId.username}}</span>.</h2>
+    <h3>This is your private info</h3>
+    <p class="form-control">Your Name: {{foundObjFromId.username}} </p>
+    <p class="form-control">Your Email: {{foundObjFromId.useremail}}</p>
+    <p class="account-message">Would you like to edit your details?</p>
+    <a class=" button" href="/edit-account">Edit my account</a>
+  </div>
 </section>

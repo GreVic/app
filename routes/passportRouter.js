@@ -41,7 +41,7 @@ passportRouter.post("/signup", isLoggedOut(), async (req, res, next) => {
 });
 
 //Show user info
-passportRouter.get("/show", isLoggedIn(), async (req, res, next) => {
+passportRouter.get("/my-account", isLoggedIn(), async (req, res, next) => {
   try {
     const { id } = req.user;
     const foundObjFromId = await model.findById(id);
@@ -53,7 +53,7 @@ passportRouter.get("/show", isLoggedIn(), async (req, res, next) => {
 });
 
 //Edit user info
-passportRouter.get("/edit", isLoggedIn(), async (req, res) => {
+passportRouter.get("/edit-account", isLoggedIn(), async (req, res) => {
   const { id } = req.user;
   const obj = await model.findById(id);
   return res.render("passport/edit", { obj, isUpdate: true });
@@ -77,7 +77,7 @@ passportRouter.get("/logout", isLoggedIn(), async (req, res, next) => {
 });
 
 //Private
-passportRouter.get("/private", isLoggedIn(), (req, res, next) => {
+passportRouter.get("/movie", isLoggedIn(), (req, res, next) => {
   res.render("passport/private");
 });
 

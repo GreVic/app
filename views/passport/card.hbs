@@ -1,9 +1,9 @@
 <div class="container">
   <div class="cardMax">
-    <div>
+    <div class="col-card">
       <img class="movie-image" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
     </div>
-    <div>
+    <div class="col-card">
       <h2>{{movie.original_title}}</h2>
       <p>{{movie.tagline}}</p>
       <p>{{movie.vote_average}}</p>
@@ -12,6 +12,11 @@
       <p>{{movie.runtime}} min.</p>
       <p>Languages spoken in the movie: {{movie.spoken_languages.[0].name}}</p>
       <p>Original language: "{{movie.original_language}}"</p>
+      <p>
+        <h5>Stream On:</h5> <a href="#">Netflix</a> | <a href="#">Amazon Prime</a>| <a href="#">HBO</a>
+      </p>
+      <p class="account-message">Not what you expected?</p>
+      <a class=" button" href="/movie">Find another movie</a>
     </div>
   </div>
 </div>

@@ -11,10 +11,6 @@ select {
   height: 35px; }
 
 /*BUTTONS*/
-a:hover {
-  text-decoration: none;
-  color: #fff; }
-
 button,
 .button {
   background-color: #f168c1;
@@ -26,6 +22,14 @@ button,
   button:hover,
   .button:hover {
     background-color: #f207a0; }
+
+a.button,
+a:not([href]).button {
+  color: #fff; }
+  a.button:hover,
+  a:not([href]).button:hover {
+    text-decoration: none;
+    color: #fff; }
 
 /*MENU*/
 .bg-light {
@@ -128,8 +132,6 @@ header {
     width: 46%;
     margin: 2%;
     border-radius: 30px;
-    -webkit-box-shadow: 10px 10px 19px -10px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 19px -10px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 19px -10px rgba(0, 0, 0, 0.75);
     background-color: #595173;
     cursor: pointer; }
@@ -162,5 +164,20 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around; }
+  .cardMax .col-card {
+    width: 46%;
+    margin: 2%; }
+    .cardMax .col-card .movie-image {
+      width: 100%;
+      box-shadow: 10px 10px 19px -10px rgba(0, 0, 0, 0.75); }
+
+/*Width Forms*/
+.width-forms {
+  width: 50%;
+  margin: auto; }
+
+/*User style*/
+.user-name {
+  color: #f168c1; }
 
 /*# sourceMappingURL=style.css.map */

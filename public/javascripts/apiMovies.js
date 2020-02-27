@@ -81,16 +81,17 @@ function apiMaster() {
           original_language,
           backdrop_path,
           vote_average,
-          overview, id
+          overview,
+          id
         } = data;
         const card = `<div class="card"><a href="/movie/${id}"><img class="movie-image" src=${
           backdrop_path
             ? `https://image.tmdb.org/t/p/w500/${backdrop_path}`
             : "http://localhost:3001/images/default.png"
-          }>
+        }>
           <div class="card-text">
-            <h3>Title: ${original_title}</h3>
-            <p>Overview: ${overview}</p>
+            <h3>${original_title}</h3>
+            <p>${overview}</p>
             <div class="average">
               <p><h5>Language:</h5> ${original_language}</p>
               <p><h5>Vote Average:</h5> ${vote_average}</p>
@@ -105,7 +106,6 @@ function apiMaster() {
 
       return movies;
     });
-
   }
 
   return getDataAndPrint(baseURL, languagesPrint, genresPrint);
