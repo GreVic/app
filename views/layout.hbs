@@ -26,23 +26,23 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
 
-
-
         {{#if user}}
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            Hello {{ user.username}}
+            Hello, <span class="user-name">{{ user.username}}</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/private">Find Your movie</a>
+            <a class="dropdown-item" href="/my-account">My Account</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/show">My Account</a>
-            <a class="dropdown-item" href="/edit">Edit Account</a>
+            <a class="dropdown-item" href="/edit-account">Edit Account</a>
 
           </div>
         </li>
-
+        <li class="nav-item">
+          <a class="nav-link" href="/movie">Find Your movie</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="/logout">Log Out</a>
         </li>
