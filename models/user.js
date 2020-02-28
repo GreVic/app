@@ -21,12 +21,7 @@ User.collection
       name: "username"
     }
   ])
-  // User.collection.createIndexes([
-  //   {
-  //     key: { username: 1 },
-  //     name: "username"
-  //   }
-  // ]);
+
   .catch(e => console.log(e));
 
 module.exports = User;
