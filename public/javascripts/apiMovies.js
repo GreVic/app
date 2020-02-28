@@ -74,7 +74,7 @@ function apiMaster() {
       //console.log(movies);
 
       movies.data.results.forEach(data => {
-        const defaultImage = "http://localhost:3001/images/default.png";
+        const defaultImage = "https://res.cloudinary.com/dul90jusb/image/upload/v1582912162/Greevic/default_iwh7gr.png";
         //const moviePoster = `https://image.tmdb.org/t/p/w500/${backdrop_path}`;
         const {
           original_title,
@@ -87,8 +87,8 @@ function apiMaster() {
         const card = `<div class="card"><a href="/movie/${id}"><img class="movie-image" src=${
           backdrop_path
             ? `https://image.tmdb.org/t/p/w500/${backdrop_path}`
-            : "http://localhost:3001/images/default.png"
-        }>
+            : "https://res.cloudinary.com/dul90jusb/image/upload/v1582912162/Greevic/default_iwh7gr.png"
+          }>
           <div class="card-text">
             <h3>${original_title}</h3>
             <p>${overview}</p>
@@ -96,7 +96,15 @@ function apiMaster() {
               <p><h5>Language:</h5> ${original_language}</p>
               <p><h5>Vote Average:</h5> ${vote_average}</p>
             </div>
-            <p><h5>Stream On:</h5> <a href="#">Netflix</a> | <a href="#">Amazon Prime</a>| <a href="#">HBO</a></p>
+            <p><h5>Stream On:</h5> <a
+            href="https://www.netflix.com/watch/80203147?trackId=13752289&tctx=0%2C0%2C462185742f6066a07c133611d5da8f57aebf5966%3A0719d4feaa7c495afcf149b867741d7bd07a582f%2C%2C"
+            target="_blank"><img
+              src="https://res.cloudinary.com/dul90jusb/image/upload/v1582911840/Greevic/logo-netflix_ejgyud.png"></a>
+          <a href="#"><img
+              src="https://res.cloudinary.com/dul90jusb/image/upload/v1582911840/Greevic/logo-amazon_ifdixq.png"></a>
+          <a href="#"><img
+              src="https://res.cloudinary.com/dul90jusb/image/upload/v1582911840/Greevic/logo-hbo_qkssjc.png"></a>
+        </p>
             
           </div>
           </a></div> `;
