@@ -84,9 +84,22 @@ header {
 .section-1 {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: space-around;
   padding: 30px 0px; }
+
+.section-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-evenly;
+  padding: 30px 0px;
+  width: 80%;
+  margin: auto; }
+  .section-2 .article {
+    width: 30%; }
+    .section-2 .article h4 {
+      margin: 20px 0px; }
 
 .article {
   display: flex;
@@ -94,7 +107,8 @@ header {
   align-items: center;
   justify-content: center;
   padding: 15px 30px;
-  text-align: center; }
+  text-align: center;
+  width: 33.3%; }
 
 .icons {
   display: flex;
@@ -102,6 +116,10 @@ header {
   align-items: center;
   justify-content: space-around;
   text-align: center; }
+  .icons img {
+    max-height: 50px;
+    max-width: 50px;
+    margin: 0px 10px; }
 
 .bg-section-2 {
   background-color: #685e8c;
@@ -179,5 +197,11 @@ header {
 /*User style*/
 .user-name {
   color: #f168c1; }
+
+/*Comments*/
+.comments-space {
+  background-color: rgba(242, 135, 5, 0.2);
+  padding: 25px;
+  margin-bottom: 50px; }
 
 /*# sourceMappingURL=style.css.map */

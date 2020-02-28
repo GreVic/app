@@ -5,53 +5,53 @@
     </div>
     <div class="col-card">
       <h2>{{movie.original_title}}</h2>
-      <p>⭐️ Movie Tagline: {{movie.tagline}}</p>
-      <p>💯 Vote Average: {{movie.vote_average}}</p>
-      <p>📝 Movie Overview: {{movie.overview}}</p>
-      <p>📅 Release Date: {{movie.release_date}}</p>
-      <p>⏰ Movie Runtime: {{movie.runtime}} min.</p>
-      <p>🏳️‍🌈 Languages spoken in the movie: {{movie.spoken_languages.[0].name}}</p>
-      <p>📚 Original language: "{{movie.original_language}}"</p>
       <p>
-        <h5>Stream On:</h5> <a
-          href="https://www.netflix.com/watch/80203147?trackId=13752289&tctx=0%2C0%2C462185742f6066a07c133611d5da8f57aebf5966%3A0719d4feaa7c495afcf149b867741d7bd07a582f%2C%2C"
-          target="_blank"><img
-            src="https://res.cloudinary.com/dul90jusb/image/upload/v1582911840/Greevic/logo-netflix_ejgyud.png"></a>
-        <a href="#"><img
-            src="https://res.cloudinary.com/dul90jusb/image/upload/v1582911840/Greevic/logo-amazon_ifdixq.png"></a>
-        <a href="#"><img
-            src="https://res.cloudinary.com/dul90jusb/image/upload/v1582911840/Greevic/logo-hbo_qkssjc.png"></a>
+        <h5>⭐️ Movie Tagline:</h5>{{movie.tagline}}
       </p>
-      <div>
-        <h4>Leave your comment {{foundObjFromId.username}} </h4>
-        <span class="user-name">{{foundObjFromId.username}}</span>
-
-        <div>
-          <form action="/signup" method="POST" id="form-container">
-            <div class="form-group">
-
-              <textarea id="comment" type="text" class="form-control" name="comment"
-                placeholder="What would you like to share?"></textarea>
-              <p>Posted by: {{foundObjFromId.username}} </p>
-
-            </div>
-
-
-
-            {{#if message}}
-            <div class="error-message">{{ message }}</div>
-            {{/if}}
-            <a class="button">Create account</a>
-            <br><br>
-            <p class="account-message">
-              Do you already have an account?
-              <a href="/login">Login</a>
-            </p>
-          </form>
-        </div>
+      <p>
+        <h5>💯 Vote Average:</h5>{{movie.vote_average}}
+      </p>
+      <p>
+        <h5>📝 Movie Overview:</h5>{{movie.overview}}
+      </p>
+      <p>
+        <h5>📅 Release Date:</h5>{{movie.release_date}}
+      </p>
+      <p>
+        <h5>⏰ Movie Runtime:</h5>{{movie.runtime}} min.
+      </p>
+      <p>
+        <h5>📚 Languages spoken in the movie:</h5>{{movie.spoken_languages.[0].name}}
+      </p>
+      <h5>Stream On:</h5>
+      <div class="icons">
+        <a href="https://www.netflix.com/watch/80203147?trackId=13752289&tctx=0%2C0%2C462185742f6066a07c133611d5da8f57aebf5966%3A0719d4feaa7c495afcf149b867741d7bd07a582f%2C%2C"
+          target="_blank" width="33.3%"><img
+            src="https://res.cloudinary.com/dul90jusb/image/upload/v1582911840/Greevic/logo-netflix_ejgyud.png"
+            alt="Netflix" width="95%"></a>
+        <a href="#" width="33.3%"><img
+            src="https://res.cloudinary.com/dul90jusb/image/upload/v1582911840/Greevic/logo-amazon_ifdixq.png"
+            alt="Amazon Prime" width="95%"></a>
+        <a href="#" width="33.3%"><img
+            src="https://res.cloudinary.com/dul90jusb/image/upload/v1582911840/Greevic/logo-hbo_qkssjc.png" alt="HBO"
+            width="95%"></a>
       </div>
+    </div>
+  </div>
+  <div class="comments-space">
+    <h2>Leave your comment</h2>
+    <div class="width-forms">
+      <form action="/signup" method="POST" id="form-container">
+        <div class="form-group">
+          <textarea id="comment" type="text" class="form-control" name="comment"
+            placeholder="What would you like to share?"></textarea>
+          <br>
+          <a class="button">Post my comment</a>
+        </div>
+      </form>
       <p class="account-message">Not what you expected?</p>
       <a class=" button" href="/movie">Find another movie</a>
+
     </div>
 
   </div>
