@@ -232,6 +232,20 @@ header {
   .col-card {
     width: $width-cards;
     margin: $margin-cards;
+    .icons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      img {
+        max-width: 100%;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
     .movie-image {
       width: $width-images;
       box-shadow: $shadow;
@@ -252,5 +266,6 @@ header {
 .comments-space {
   background-color: rgba($orange, 0.2);
   padding: 25px;
-  margin-bottom: 50px;
+  margin: 25px 0px;
+  border-radius: 30px;
 }

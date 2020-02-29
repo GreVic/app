@@ -185,6 +185,17 @@ header {
   .cardMax .col-card {
     width: 46%;
     margin: 2%; }
+    .cardMax .col-card .icons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center; }
+      .cardMax .col-card .icons img {
+        max-width: 100%;
+        transition: all 0.2s ease-in-out; }
+        .cardMax .col-card .icons img:hover {
+          transform: scale(1.1); }
     .cardMax .col-card .movie-image {
       width: 100%;
       box-shadow: 10px 10px 19px -10px rgba(0, 0, 0, 0.75); }
@@ -202,6 +213,7 @@ header {
 .comments-space {
   background-color: rgba(242, 135, 5, 0.2);
   padding: 25px;
-  margin-bottom: 50px; }
+  margin: 25px 0px;
+  border-radius: 30px; }
 
 /*# sourceMappingURL=style.css.map */

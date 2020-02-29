@@ -26,33 +26,37 @@
       <h5>Stream On:</h5>
       <div class="icons">
         <a href="https://www.netflix.com/watch/80203147?trackId=13752289&tctx=0%2C0%2C462185742f6066a07c133611d5da8f57aebf5966%3A0719d4feaa7c495afcf149b867741d7bd07a582f%2C%2C"
-          target="_blank" width="33.3%"><img
+          target="_blank"><img
             src="https://res.cloudinary.com/dul90jusb/image/upload/v1582911840/Greevic/logo-netflix_ejgyud.png"
             alt="Netflix" width="95%"></a>
-        <a href="#" width="33.3%"><img
+        <a href="#"><img
             src="https://res.cloudinary.com/dul90jusb/image/upload/v1582911840/Greevic/logo-amazon_ifdixq.png"
             alt="Amazon Prime" width="95%"></a>
-        <a href="#" width="33.3%"><img
-            src="https://res.cloudinary.com/dul90jusb/image/upload/v1582911840/Greevic/logo-hbo_qkssjc.png" alt="HBO"
-            width="95%"></a>
+        <a href="#"><img src="https://res.cloudinary.com/dul90jusb/image/upload/v1582911840/Greevic/logo-hbo_qkssjc.png"
+            alt="HBO" width="95%"></a>
       </div>
     </div>
   </div>
   <div class="comments-space">
-    <h2>Leave your comment</h2>
+    <h2>{{user.username}}, Leave your comment</h2>
     <div class="width-forms">
-      <form action="/signup" method="POST" id="form-container">
+      <form action="/movie/{{user._id}}/{{movie.id}}" method="POST" id="form-container">
         <div class="form-group">
           <textarea id="comment" type="text" class="form-control" name="comment"
             placeholder="What would you like to share?"></textarea>
           <br>
-          <a class="button">Post my comment</a>
+          <button class="button" type="submit">Post my comment</button>
         </div>
       </form>
-      <p class="account-message">Not what you expected?</p>
-      <a class=" button" href="/movie">Find another movie</a>
-
     </div>
-
   </div>
+  <div class="width-forms" style="margin-bottom: 50px;">
+    <p class="account-message">Not what you expected?</p>
+    <a class=" button" href="/movies">Find another movie</a>
+  </div>
+
+  {{#each comments}}
+  <h1>{{this.userId.username}}: {{this.commentMovie}}</h1>
+  {{/each}}
+
 </div>
