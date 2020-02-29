@@ -93,7 +93,7 @@ header {
   flex-direction: row;
   align-items: start;
   justify-content: space-evenly;
-  padding: 30px 0px;
+  padding: 0px 0px;
   width: 80%;
   margin: auto; }
   .section-2 .article {
@@ -176,12 +176,20 @@ header {
     #movies .card .average {
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly; }
+      justify-content: space-evenly;
+      align-self: flex-end; }
+      #movies .card .average h5 {
+        color: #f168c1;
+        font-size: 16px; }
 
 .cardMax {
   display: flex;
   flex-direction: row;
   justify-content: space-around; }
+  .cardMax h2 {
+    color: #f207a0; }
+  .cardMax h5 {
+    color: #685e8c; }
   .cardMax .col-card {
     width: 46%;
     margin: 2%; }
@@ -215,5 +223,33 @@ header {
   padding: 25px;
   margin: 25px 0px;
   border-radius: 30px; }
+
+.the-comments {
+  padding: 20px;
+  background-color: #f5f5f5;
+  margin-bottom: 20px;
+  border-radius: 30px; }
+
+.center {
+  text-align: center; }
+
+.overview {
+  text-align: justify; }
+
+a {
+  color: #f168c1;
+  text-decoration: none; }
+  a:hover {
+    color: #f207a0;
+    text-decoration: none; }
+
+.title-purple {
+  color: #685e8c; }
+
+.title-orange {
+  color: #f28705; }
+
+.rectangle {
+  border: solid 2px #f28705; }
 
 /*# sourceMappingURL=style.css.map */
