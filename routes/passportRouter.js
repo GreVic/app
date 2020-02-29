@@ -28,6 +28,9 @@ passportRouter.get("/signup", isLoggedOut(), (req, res, next) => {
 passportRouter.post("/signup", isLoggedOut(), async (req, res, next) => {
   const { username, useremail, password } = req.body;
   const existingUser = await model.findOne({ username });
+
+  console.log(useremail);
+
   if (!existingUser) {
     const newUser = await model.create({
       username,
@@ -77,16 +80,8 @@ passportRouter.get("/logout", isLoggedIn(), async (req, res, next) => {
 });
 
 //Private
-passportRouter.get("/movie", isLoggedIn(), (req, res, next) => {
+passportRouter.get("/movies", isLoggedIn(), (req, res, next) => {
   res.render("passport/private");
 });
-
-// passportRouter.get(
-//   "/private-page",
-//   ensureLogin.ensureLoggedIn(),
-//   (req, res) => {
-//     res.render("passport/private", { user: req.user });
-//   }
-// );
 
 module.exports = passportRouter;
