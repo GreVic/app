@@ -37,7 +37,10 @@ passportRouter.post("/signup", isLoggedOut(), async (req, res, next) => {
       useremail,
       password: hashPassword(password)
     });
-    res.redirect("/login");
+
+    req.login(newUser, () => {
+      return res.redirect("/login");
+    });
   } else {
     res.render("passport/signup");
   }

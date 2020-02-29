@@ -12,7 +12,8 @@
         <h5>💯 Vote Average:</h5>{{movie.vote_average}}
       </p>
       <p>
-        <h5>📝 Movie Overview:</h5>{{movie.overview}}
+        <h5>📝 Movie Overview:</h5>
+        <p class="overview">{{movie.overview}}</p>
       </p>
       <p>
         <h5>📅 Release Date:</h5>{{movie.release_date}}
@@ -38,8 +39,14 @@
     </div>
   </div>
   <div class="comments-space">
-    <h2>{{user.username}}, Leave your comment</h2>
+
     <div class="width-forms">
+      <h5><span class="user-name">{{user.username}}</span>, leave your comment:</h5>
+      <div class="the-comments">
+        {{#each comments}}
+        <p>{{this.userId.username}}: {{this.commentMovie}}</p>
+        {{/each}}
+      </div>
       <form action="/movie/{{user._id}}/{{movie.id}}" method="POST" id="form-container">
         <div class="form-group">
           <textarea id="comment" type="text" class="form-control" name="comment"
@@ -48,15 +55,11 @@
           <button class="button" type="submit">Post my comment</button>
         </div>
       </form>
+      </divc>
     </div>
+
   </div>
-  <div class="width-forms" style="margin-bottom: 50px;">
+  <div class="width-forms center" style="margin-bottom: 50px;">
     <p class="account-message">Not what you expected?</p>
     <a class=" button" href="/movies">Find another movie</a>
   </div>
-
-  {{#each comments}}
-  <h1>{{this.userId.username}}: {{this.commentMovie}}</h1>
-  {{/each}}
-
-</div>

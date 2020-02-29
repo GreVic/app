@@ -121,7 +121,7 @@ header {
   flex-direction: row;
   align-items: start;
   justify-content: space-evenly;
-  padding: 30px 0px;
+  padding: 0px 0px;
   width: 80%;
   margin: auto;
   .article {
@@ -221,6 +221,11 @@ header {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
+      align-self: flex-end;
+      h5 {
+        color: $light-pink;
+        font-size: 16px;
+      }
     }
   }
 }
@@ -229,6 +234,12 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  h2 {
+    color: $pink;
+  }
+  h5 {
+    color: $light-purple;
+  }
   .col-card {
     width: $width-cards;
     margin: $margin-cards;
@@ -268,4 +279,39 @@ header {
   padding: 25px;
   margin: 25px 0px;
   border-radius: 30px;
+}
+.the-comments {
+  padding: 20px;
+  background-color: $light-grey;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+
+.center {
+  text-align: center;
+}
+
+.overview {
+  text-align: justify;
+}
+
+a {
+  color: $light-pink;
+  text-decoration: none;
+  &:hover {
+    color: $pink;
+    text-decoration: none;
+  }
+}
+
+.title-purple {
+  color: $light-purple;
+}
+
+.title-orange {
+  color: $orange;
+}
+
+.rectangle {
+  border: solid 2px $orange;
 }
