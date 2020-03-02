@@ -1,12 +1,6 @@
-//const gen = require("genres");
 const sorting = document.querySelector("#sorting");
-//&sort_by=runtime.asc
-//const baseURL = "https://api.themoviedb.org/3/discover/movie?api_key=62706964a54757878e9737ac5a8ceafc&with_genres=18&with_original_language=ca&sort_by=runtime.asc"
 const languages = document.querySelector("#language");
 const genres = document.querySelector("#genre");
-//const adults = document.querySelector("#adult");
-
-//&with_original_language=en
 
 const gen = [
   {
@@ -66,17 +60,14 @@ function apiMaster() {
   const genresPrint = genres.value;
 
   const baseURL = `https://api.themoviedb.org/3/discover/movie?api_key=62706964a54757878e9737ac5a8ceafc&with_original_language=${languages.value}&with_genres=${genres.value}&sort_by=${sorting.value}`;
-  //&include_adult=${adults.value == "true"} checkbox?
 
   function getDataAndPrint(baseURL, languagesPrint, genresPrint) {
     document.querySelector("#movies").innerHTML = "";
     axios.get(baseURL).then(movies => {
-      //console.log(movies);
 
       movies.data.results.forEach(data => {
         const defaultImage =
           "https://res.cloudinary.com/dul90jusb/image/upload/v1582912162/Greevic/default_iwh7gr.png";
-        //const moviePoster = `https://image.tmdb.org/t/p/w500/${backdrop_path}`;
         const {
           original_title,
           original_language,
@@ -89,7 +80,7 @@ function apiMaster() {
           backdrop_path
             ? `https://image.tmdb.org/t/p/w500/${backdrop_path}`
             : "https://res.cloudinary.com/dul90jusb/image/upload/v1582912162/Greevic/default_iwh7gr.png"
-        }>
+          }>
           <div class="card-text">
             <h3>${original_title}</h3>
             <p>${overview}</p>
@@ -113,5 +104,4 @@ function apiMaster() {
 languages.addEventListener("change", apiMaster);
 genres.addEventListener("change", apiMaster);
 sorting.addEventListener("change", apiMaster);
-//adults.addEventListener("change", apiMaster);
 apiMaster();
