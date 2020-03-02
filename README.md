@@ -9,7 +9,7 @@ Con Greevic puedes aprender nuevos idiomas viendo películas en su idioma origin
 ### ¿Cómo utilizar Greevic?
 ---
 Como hemos comentado antes, Greevic es una nueva forma de aprender idiomas y funciona así:
-i. Accedemos en https://greevic-app.herokuapp.com/, donde se muestra una pantalla de presentación. Hacemos click en "ENTER"
+#### Accedemos en https://greevic-app.herokuapp.com/, donde se muestra una pantalla de presentación. Hacemos click en "ENTER"
 ii. Una vez dentro, hemos llegado a la home. Aquí tenemos 2 opciones: registarnos o iniciar sesión, acciones que podemos hacer tanto en el menú como en el último módulo que se muestra en la home. Para registrarnos debemos introducir un nombe de usuario, email y contraseña. Para poder iniciar sesión debemos utilizar nuestro nombre de usuario y contraseña.
 iii. Tras haber iniciado sesión, podemos pasar a encontrar nuestra película en "Find your movie". En esta página se muestra una lista de películas que nos muestra el título, sinopsis, el idioma original de la película y la media de votos.
 iv. Ahora vamos a lo que nos interesa. Elegimos el idioma que queremos aprender de la lista, elegimos el género de la película y, si queremos, podemos ordenar los resultados por popularidad, fecha de estreno o título original de forma ascedente y descendente respectivamente.
@@ -78,7 +78,7 @@ Esta sección explica a desarrolladores cuáles son las maneras habituales de en
 ### Código de conducta 
 ---
 El código de conducta establece las normas sociales, reglas y responsabilidades que los individuos y organizaciones deben seguir al interactuar de alguna manera con la herramienta digital o su comunidad. Es una buena práctica para crear un ambiente de respeto e inclusión en las contribuciones al proyecto. 
-La plataforma Github premia y ayuda a los repositorios dispongan de este archivo. Al crear CODE_OF_CONDUCT.md puedes empezar desde una plantilla sugerida por ellos. Puedes leer más sobre cómo crear un archivo de Código de Conducta (aquí)[https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/]
+La plataforma Github premia y ayuda a los repositorios dispongan de este archivo. Al crear CODE_OF_CONDUCT.md puedes empezar desde una plantilla sugerida por ellos. Puedes leer más sobre cómo crear un archivo de Código de Conducta (aquí)[https://res.cloudinary.com/dul90jusb/image/upload/v1583163125/Greevic/greevic-card_apcn9u.png]
 ### Autor/es
 ---
 Nombra a el/los autor/es original/es. Consulta con ellos antes de publicar un email o un nombre personal. Una manera muy común es dirigirlos a sus cuentas de redes sociales.
