@@ -15,7 +15,6 @@ const withDbConnection = async (fn, disconnectEnd = true) => {
     console.log("ERROR");
     console.log(error);
   } finally {
-    // Disconnect from database
     if (disconnectEnd) {
       await mongoose.disconnect();
       console.log("disconnected");

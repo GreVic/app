@@ -32,7 +32,6 @@ const debug = require("debug")(
 
 const app = express();
 
-// Middleware Setup
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -50,8 +49,6 @@ app.use(
 app.use(flash());
 
 require("./passport")(app);
-
-// Express View engine setup
 
 app.use(
   require("node-sass-middleware")({
@@ -73,7 +70,6 @@ app.use((req, res, next) => {
   console.log(req.session);
   res.locals.user = req.user;
   if (req.user) {
-    // User exists
     req.user.visitas += 1;
     req.user.save();
   }
@@ -81,10 +77,8 @@ app.use((req, res, next) => {
   next();
 });
 
-// default value for title local
 app.locals.title = "Greevic | Learn new languages with movies";
 
-// Routes middleware goes here
 const index = require("./routes/index");
 app.use("/", index);
 

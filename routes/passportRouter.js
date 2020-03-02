@@ -7,13 +7,10 @@ const { isLoggedIn, isLoggedOut } = require("../lib/isLoggedMiddleware");
 
 const ensureLogin = require("connect-ensure-login");
 
-//Home
 passportRouter.get("/home", (req, res, next) => {
   res.render("passport/index");
 });
 
-
-// Create: login
 passportRouter.get("/login", isLoggedOut(), (req, res, next) => {
   res.render("passport/login");
 });
@@ -27,7 +24,6 @@ passportRouter.post(
   })
 );
 
-// Create: signup or register
 passportRouter.get("/signup", isLoggedOut(), (req, res, next) => {
   res.render("passport/signup");
 });
@@ -51,7 +47,6 @@ passportRouter.post("/signup", isLoggedOut(), async (req, res, next) => {
   }
 });
 
-//Show user info
 passportRouter.get("/my-account", isLoggedIn(), async (req, res, next) => {
   try {
     const { id } = req.user;
@@ -63,7 +58,6 @@ passportRouter.get("/my-account", isLoggedIn(), async (req, res, next) => {
   }
 });
 
-//Edit user info
 passportRouter.get("/edit-account", isLoggedIn(), async (req, res) => {
   const { id } = req.user;
   const obj = await model.findById(id);
@@ -81,13 +75,11 @@ passportRouter.post("/edit-account", isLoggedIn(), async (req, res) => {
   res.redirect("/my-account");
 });
 
-// Logout
 passportRouter.get("/logout", isLoggedIn(), async (req, res, next) => {
   req.logout();
   res.redirect("/home");
 });
 
-//Private
 passportRouter.get("/movies", isLoggedIn(), (req, res, next) => {
   res.render("passport/private");
 });
