@@ -78,7 +78,8 @@ app
 |_ withDbConnection.js
 ```
 #### Dependencias
-STRENGTH: Utilizado para comprobar la seguridad de tu contraseña. [Strength](https://www.jquerycards.com/forms/inputs/strength-js/).
+STRENGTH: Utilizado para comprobar la seguridad de tu contraseña. [Strength](https://www.jquerycards.com/forms/inputs/strength-js).
+AOS: Libreria para animaciones CSS con scroll. [AOS CSS](https://michalsnik.github.io/aos/).
 
 ### Cómo contribuir
 ---

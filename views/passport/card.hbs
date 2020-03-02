@@ -1,9 +1,9 @@
 <div class="container">
   <div class="cardMax">
     <div class="col-card">
-      <img class="movie-image" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+      <img class="movie-image" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" data-aos="fade-up">
     </div>
-    <div class="col-card">
+    <div class="col-card" data-aos="fade-up">
       <h2>{{movie.original_title}}</h2>
       <p>
         <h5>⭐️ Movie Tagline:</h5>{{movie.tagline}}
@@ -38,7 +38,7 @@
       </div>
     </div>
   </div>
-  <div class="comments-space">
+  <div class="comments-space" data-aos="fade-up">
 
     <div class="width-forms">
       <h5><span class="user-name">{{user.username}}</span>, leave your comment:</h5>
