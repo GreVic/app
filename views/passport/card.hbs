@@ -44,7 +44,9 @@
       <h5><span class="user-name">{{user.username}}</span>, leave your comment:</h5>
       <div class="the-comments">
         {{#each comments}}
-        <p>{{this.userId.username}}: {{this.commentMovie}}</p>
+        <p>
+          {{this.userId.username}}: {{this.commentMovie}}
+        </p>
         {{/each}}
       </div>
       <form action="/movie/{{user._id}}/{{movie.id}}" method="POST" id="form-container">

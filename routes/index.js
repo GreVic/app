@@ -6,8 +6,14 @@ const { isLoggedIn, isLoggedOut } = require("../lib/isLoggedMiddleware");
 
 /* GET home page */
 router.get("/", (req, res, next) => {
-  return res.render("index");
+  return res.render("enter", {
+    layout: false
+  });
 });
+
+// router.get("/", (req, res, next) => {
+//   return res.render("enter");
+// });
 
 /* Movie router */
 router.use("/", require("./movieRouter"));
