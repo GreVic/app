@@ -16,7 +16,7 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/"><img
+    <a class="navbar-brand" href="/home"><img
         src="https://res.cloudinary.com/dul90jusb/image/upload/v1582912161/Greevic/greevic-logo_ms69iu.png"
         alt="greevic logo" width="150"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -24,12 +24,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
 
         {{#if user}}
-
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -39,7 +37,6 @@
             <a class="dropdown-item" href="/my-account">My Account</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/edit-account">Edit Account</a>
-
           </div>
         </li>
         <li class="nav-item">
@@ -57,10 +54,8 @@
         <li class="nav-item">
           <a class="nav-link" href="/login">Login</a>
         </li>
-
         {{/if}}
       </ul>
-
 
     </div>
   </nav>
@@ -69,12 +64,18 @@
     {{{body}}}
   </section>
   <footer>
-    <p>Designed by Greevic © 👩🏻‍💻🎶👨🏻‍💻</p>
-
+    <p>Designed by Greevic © </p>
+    <a href="https://www.linkedin.com/in/patriciabusquets/">
+      <img src="https://res.cloudinary.com/dul90jusb/image/upload/v1583152231/Greevic/gree-footer_rxngq6.png"
+        alt="gree">
+    </a>
+    <a href="https://www.linkedin.com/in/victormmorales/">
+      <img src="https://res.cloudinary.com/dul90jusb/image/upload/v1583152231/Greevic/vic-footer_dx41dm.png" alt="vic">
+    </a>
   </footer>
+
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script type="text/javascript" src="/javascripts/apiMovies.js"></script>
-
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="/javascripts/script.js"></script>
@@ -91,10 +92,5 @@
     crossorigin="anonymous"></script>
 
 </body>
-<!-- Probar llamada api
- <script>
-    window.onload = function () {
-      console.log(apiMaster()); }
-  </script>  -->
 
 </html>

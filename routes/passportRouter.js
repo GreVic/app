@@ -6,6 +6,13 @@ const passport = require("passport");
 const { isLoggedIn, isLoggedOut } = require("../lib/isLoggedMiddleware");
 
 const ensureLogin = require("connect-ensure-login");
+
+//Home
+passportRouter.get("/home", (req, res, next) => {
+  res.render("passport/index");
+});
+
+
 // Create: login
 passportRouter.get("/login", isLoggedOut(), (req, res, next) => {
   res.render("passport/login");
@@ -15,7 +22,7 @@ passportRouter.post(
   "/login",
   isLoggedOut(),
   passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "/home",
     failureRedirect: "/signup"
   })
 );
@@ -29,8 +36,6 @@ passportRouter.post("/signup", isLoggedOut(), async (req, res, next) => {
   const { username, useremail, password } = req.body;
   const existingUser = await model.findOne({ username });
 
-  console.log(useremail);
-
   if (!existingUser) {
     const newUser = await model.create({
       username,
@@ -39,7 +44,7 @@ passportRouter.post("/signup", isLoggedOut(), async (req, res, next) => {
     });
 
     req.login(newUser, () => {
-      return res.redirect("/login");
+      return res.redirect("/home");
     });
   } else {
     res.render("passport/signup");
@@ -79,7 +84,7 @@ passportRouter.post("/edit-account", isLoggedIn(), async (req, res) => {
 // Logout
 passportRouter.get("/logout", isLoggedIn(), async (req, res, next) => {
   req.logout();
-  res.redirect("/");
+  res.redirect("/home");
 });
 
 //Private
